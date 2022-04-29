@@ -391,113 +391,173 @@
   <data name="&gt;&gt;panel_menu.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 209</value>
+  <data name="dataGridView_takedBooks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 65</value>
   </data>
-  <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+  <data name="dataGridView_takedBooks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>561, 253</value>
   </data>
-  <data name="textBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
-    <value>textBox4</value>
-  </data>
-  <data name="&gt;&gt;textBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
-    <value>panel_view</value>
-  </data>
-  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
+  <data name="dataGridView_takedBooks.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 179</value>
+  <data name="dataGridView_takedBooks.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+  <data name="&gt;&gt;dataGridView_takedBooks.Name" xml:space="preserve">
+    <value>dataGridView_takedBooks</value>
   </data>
-  <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;dataGridView_takedBooks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
-    <value>textBox3</value>
+  <data name="&gt;&gt;dataGridView_takedBooks.Parent" xml:space="preserve">
+    <value>panel_TakedBooks</value>
   </data>
-  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
-    <value>panel_view</value>
-  </data>
-  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 140</value>
-  </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
-    <value>panel_view</value>
-  </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 101</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>panel_view</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 235</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;dataGridView_takedBooks.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>button1</value>
+  <data name="label_books.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="label_books.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 20.25pt, style=Bold, Italic</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label_books.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 13</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="label_books.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 38</value>
+  </data>
+  <data name="label_books.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label_books.Text" xml:space="preserve">
+    <value>Вашите взети книги</value>
+  </data>
+  <data name="label_books.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label_books.Name" xml:space="preserve">
+    <value>label_books</value>
+  </data>
+  <data name="&gt;&gt;label_books.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_books.Parent" xml:space="preserve">
+    <value>panel_TakedBooks</value>
+  </data>
+  <data name="&gt;&gt;label_books.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel_TakedBooks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 347</value>
+  </data>
+  <data name="panel_TakedBooks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 321</value>
+  </data>
+  <data name="panel_TakedBooks.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="panel_TakedBooks.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panel_TakedBooks.Name" xml:space="preserve">
+    <value>panel_TakedBooks</value>
+  </data>
+  <data name="&gt;&gt;panel_TakedBooks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel_TakedBooks.Parent" xml:space="preserve">
     <value>panel_view</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;panel_TakedBooks.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label_home.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_home.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 24pt, style=Bold, Italic</value>
+  </data>
+  <data name="label_home.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 87</value>
+  </data>
+  <data name="label_home.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 45</value>
+  </data>
+  <data name="label_home.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;label_home.Name" xml:space="preserve">
+    <value>label_home</value>
+  </data>
+  <data name="&gt;&gt;label_home.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_home.Parent" xml:space="preserve">
+    <value>panel_view</value>
+  </data>
+  <data name="&gt;&gt;label_home.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label_close.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_close.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 15.75pt, style=Bold, Italic</value>
+  </data>
+  <data name="label_close.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1137, 0</value>
+  </data>
+  <data name="label_close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 29</value>
+  </data>
+  <data name="label_close.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="label_close.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;label_close.Name" xml:space="preserve">
+    <value>label_close</value>
+  </data>
+  <data name="&gt;&gt;label_close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_close.Parent" xml:space="preserve">
+    <value>panel_view</value>
+  </data>
+  <data name="&gt;&gt;label_close.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label_homepage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 15.75pt, style=Bold</value>
+  </data>
+  <data name="label_homepage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="label_homepage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1165, 70</value>
+  </data>
+  <data name="label_homepage.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label_homepage.Text" xml:space="preserve">
+    <value>СИСТЕМА ЗА УПРАВЛЕНИЕ НА БИБЛИОТЕКА</value>
+  </data>
+  <data name="label_homepage.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label_homepage.Name" xml:space="preserve">
+    <value>label_homepage</value>
+  </data>
+  <data name="&gt;&gt;label_homepage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_homepage.Parent" xml:space="preserve">
+    <value>panel_view</value>
+  </data>
+  <data name="&gt;&gt;label_homepage.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="panel_view.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 7</value>

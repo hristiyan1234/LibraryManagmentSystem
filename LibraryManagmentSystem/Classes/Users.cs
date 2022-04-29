@@ -4,7 +4,7 @@ using System.Data;
 
 namespace LibraryManagmentSystem.Classes
 {
-    internal class Users
+    partial class Users
     {
         Database.LibraryDB db = new Database.LibraryDB();
         //функция, която ще добавя потребители:
@@ -157,6 +157,7 @@ namespace LibraryManagmentSystem.Classes
 
         }
         //...................................................
+
         //проверка дали се повтаря username на потербителя
         public Boolean UniqUsername(string username)
         {
@@ -226,8 +227,23 @@ namespace LibraryManagmentSystem.Classes
         }
         //...................................................
 
-        
+        //функция, която търси потребителя по потребителско име
+        public DataTable searchUser(string sUsername)
+        {
+            string query = "SELECT * FROM `users` WHERE `username` = @userN";
 
+            MySqlParameter[] parameters = new MySqlParameter[1];
+            parameters[0] = new MySqlParameter("@userN", MySqlDbType.VarChar);
+            parameters[0].Value = sUsername;
+
+            DataTable dt = new DataTable();
+            dt = db.getData(query, parameters);
+            return dt;
+        }
+        //..................................................
+
+        
+        //...................................................
         public DataTable UserList()
         {
             string user = "SELECT * FROM `users`";

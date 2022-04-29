@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace LibraryManagmentSystem.Classes
 {
-    internal class Authors
+    partial class Authors
     {
         Database.LibraryDB db = new Database.LibraryDB();
         //функция, която ще добавя авторите:

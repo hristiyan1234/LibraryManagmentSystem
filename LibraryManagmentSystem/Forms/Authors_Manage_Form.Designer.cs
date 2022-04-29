@@ -223,6 +223,7 @@ namespace LibraryManagmentSystem.Forms
             // 
             // dataGridView_authors
             // 
+            this.dataGridView_authors.AllowUserToAddRows = false;
             this.dataGridView_authors.AllowUserToDeleteRows = false;
             this.dataGridView_authors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -232,6 +233,7 @@ namespace LibraryManagmentSystem.Forms
             this.dataGridView_authors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView_authors.Location = new System.Drawing.Point(496, 80);
             this.dataGridView_authors.Name = "dataGridView_authors";
+            this.dataGridView_authors.ReadOnly = true;
             this.dataGridView_authors.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView_authors.RowTemplate.Height = 100;
             this.dataGridView_authors.Size = new System.Drawing.Size(664, 625);

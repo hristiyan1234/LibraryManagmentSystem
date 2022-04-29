@@ -31,7 +31,7 @@ namespace LibraryManagmentSystem.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView_books = new System.Windows.Forms.DataGridView();
             this.panel_books = new System.Windows.Forms.Panel();
             this.pictureBox_barcode = new System.Windows.Forms.PictureBox();
@@ -70,19 +70,21 @@ namespace LibraryManagmentSystem.Forms
             // dataGridView_books
             // 
             this.dataGridView_books.AllowDrop = true;
+            this.dataGridView_books.AllowUserToAddRows = false;
             this.dataGridView_books.AllowUserToDeleteRows = false;
             this.dataGridView_books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_books.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_books.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_books.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_books.Location = new System.Drawing.Point(441, 90);
             this.dataGridView_books.Name = "dataGridView_books";
+            this.dataGridView_books.ReadOnly = true;
             this.dataGridView_books.RowTemplate.Height = 100;
             this.dataGridView_books.Size = new System.Drawing.Size(719, 612);
             this.dataGridView_books.TabIndex = 0;
@@ -233,7 +235,7 @@ namespace LibraryManagmentSystem.Forms
             "Римувана рецепта",
             "Рицарски роман",
             "Розови четива",
-            "Романс",
+            "Роман",
             "Рондо",
             "Сатира",
             "Сборник",
@@ -320,7 +322,6 @@ namespace LibraryManagmentSystem.Forms
             this.comboBox_author.Location = new System.Drawing.Point(18, 287);
             this.comboBox_author.Name = "comboBox_author";
             this.comboBox_author.Size = new System.Drawing.Size(240, 31);
-            this.comboBox_author.Sorted = true;
             this.comboBox_author.TabIndex = 45;
             this.comboBox_author.SelectedIndexChanged += new System.EventHandler(this.comboBox_author_SelectedIndexChanged);
             this.comboBox_author.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_author_KeyDown);

@@ -4,7 +4,7 @@ using System.Data;
 
 namespace LibraryManagmentSystem.Classes
 {
-    internal class Books
+    partial class Books
     {
         Database.LibraryDB db = new Database.LibraryDB();
 
@@ -72,8 +72,8 @@ namespace LibraryManagmentSystem.Classes
             mySqlParameter[3].Value = isbn;
 
             mySqlParameter[4] = new MySqlParameter("@genre", MySqlDbType.VarChar);
-            mySqlParameter[4].Value = genre; 
-            
+            mySqlParameter[4].Value = genre;
+
             mySqlParameter[5] = new MySqlParameter("@pub", MySqlDbType.VarChar);
             mySqlParameter[5].Value = pub;
 
@@ -142,15 +142,56 @@ namespace LibraryManagmentSystem.Classes
         }
         //...................................................
 
-       
-        public DataTable BooksList()
+        //търсене на книга по нейния ИД & ISBN
+        public DataTable searchByIDorISBN(string searchID, int id, string isbn)
         {
-            string book = "select books.id as 'ID',books.title as 'Заглавие',concat(authors.firstName, ' ', authors.lastName) as 'Автор'," +
-                          "books.isbn as 'ISBN',books.genre as 'Жанр', books.publish as 'Издателство',books.quantity as 'Количество',books.addDate as 'Дата'" +
-                          ",books.annotation as 'Анотация',books.coverPhoto as 'Корица' from books, authors where authors.id = books.author_id";
+            string query;
+            MySqlParameter[] parameters = new MySqlParameter[1];
+            if (searchID.Equals("id"))
+            {
+                query = "SELECT * FROM `books` WHERE `id` = @id";
+                parameters[0] = new MySqlParameter("@id", MySqlDbType.Int32);
+                parameters[0].Value = id;
+            }
+            else
+            {
+                query = "SELECT * FROM `books` WHERE `isbn` = @isbn";
+                parameters[0] = new MySqlParameter("@isbn", MySqlDbType.VarChar);
+                parameters[0].Value = isbn;
+            }
+
             DataTable dt = new DataTable();
-            dt = db.getData(book, null);
+            dt = db.getData(query, parameters);
             return dt;
         }
+        //...................................................
+
+       
+
+        //BOOK INFO за данните при обращение
+        public DataRow bookInfo(int bookID)
+            {
+                string book = "select b.id,`title`,concat(a.firstName, ' ', a.lastName) as author, `isbn`," +
+                                          "`genre`, `publish`, `quantity`,`addDate`, `annotation`, `coverPhoto` from books b, authors a where b.author_id = a.id and b.id = @id";
+
+                MySqlParameter[] parameters = new MySqlParameter[1];
+                parameters[0] = new MySqlParameter("@id", MySqlDbType.Int32);
+                parameters[0].Value = bookID;
+                DataTable dt = new DataTable();
+                dt = db.getData(book, parameters);
+                return dt.Rows[0];
+            }
+
+            //................................
+            public DataTable BooksList()
+            {
+                string book = "select books.id as 'ID',books.title as 'Заглавие',concat(authors.firstName, ' ', authors.lastName) as 'Автор'," +
+                              "books.isbn as 'ISBN',books.genre as 'Жанр', books.publish as 'Издателство',books.quantity as 'Количество',books.addDate as 'Дата'" +
+                              ",books.annotation as 'Анотация',books.coverPhoto as 'Корица' from books, authors where authors.id = books.author_id";
+                DataTable dt = new DataTable();
+                dt = db.getData(book, null);
+                return dt;
+            }
+        }
     }
-}
+

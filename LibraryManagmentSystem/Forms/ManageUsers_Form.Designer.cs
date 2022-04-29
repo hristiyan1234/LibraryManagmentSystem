@@ -265,6 +265,7 @@ namespace LibraryManagmentSystem.Forms
             // 
             // button_AddPhotoUser
             // 
+            this.button_AddPhotoUser.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.button_AddPhotoUser.BackColor = System.Drawing.Color.Wheat;
             this.button_AddPhotoUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_AddPhotoUser.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
@@ -282,10 +283,13 @@ namespace LibraryManagmentSystem.Forms
             // 
             // dataGridView_users
             // 
+            this.dataGridView_users.AllowUserToAddRows = false;
+            this.dataGridView_users.AllowUserToDeleteRows = false;
             this.dataGridView_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_users.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView_users.Location = new System.Drawing.Point(376, 81);
             this.dataGridView_users.Name = "dataGridView_users";
+            this.dataGridView_users.ReadOnly = true;
             this.dataGridView_users.RowTemplate.Height = 100;
             this.dataGridView_users.Size = new System.Drawing.Size(784, 621);
             this.dataGridView_users.TabIndex = 27;

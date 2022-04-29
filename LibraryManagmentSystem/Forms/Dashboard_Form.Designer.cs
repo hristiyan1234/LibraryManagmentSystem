@@ -39,14 +39,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_view = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label_home = new System.Windows.Forms.Label();
+            this.label_close = new System.Windows.Forms.Label();
+            this.label_homepage = new System.Windows.Forms.Label();
+            this.panel_TakedBooks = new System.Windows.Forms.Panel();
+            this.dataGridView_takedBooks = new System.Windows.Forms.DataGridView();
+            this.label_books = new System.Windows.Forms.Label();
             this.panel_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_view.SuspendLayout();
+            this.panel_TakedBooks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_takedBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_menu
@@ -149,41 +152,54 @@
             // 
             // panel_view
             // 
-            this.panel_view.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel_view.Controls.Add(this.textBox4);
-            this.panel_view.Controls.Add(this.textBox3);
-            this.panel_view.Controls.Add(this.textBox2);
-            this.panel_view.Controls.Add(this.textBox1);
-            this.panel_view.Controls.Add(this.button1);
+            this.panel_view.BackColor = System.Drawing.Color.MistyRose;
+            this.panel_view.Controls.Add(this.panel_TakedBooks);
+            this.panel_view.Controls.Add(this.label_home);
+            this.panel_view.Controls.Add(this.label_close);
+            this.panel_view.Controls.Add(this.label_homepage);
             resources.ApplyResources(this.panel_view, "panel_view");
             this.panel_view.Name = "panel_view";
+            this.panel_view.MouseEnter += new System.EventHandler(this.panel_view_MouseEnter);
             // 
-            // button1
+            // label_home
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.label_home, "label_home");
+            this.label_home.Name = "label_home";
             // 
-            // textBox1
+            // label_close
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.label_close, "label_close");
+            this.label_close.BackColor = System.Drawing.Color.LimeGreen;
+            this.label_close.ForeColor = System.Drawing.Color.Ivory;
+            this.label_close.Name = "label_close";
+            this.label_close.Click += new System.EventHandler(this.label_close_Click);
+            this.label_close.MouseEnter += new System.EventHandler(this.label_close_MouseEnter);
+            this.label_close.MouseLeave += new System.EventHandler(this.label_close_MouseLeave);
             // 
-            // textBox2
+            // label_homepage
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            this.label_homepage.BackColor = System.Drawing.Color.LimeGreen;
+            resources.ApplyResources(this.label_homepage, "label_homepage");
+            this.label_homepage.Name = "label_homepage";
             // 
-            // textBox3
+            // panel_TakedBooks
             // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
+            this.panel_TakedBooks.BackColor = System.Drawing.Color.Tan;
+            this.panel_TakedBooks.Controls.Add(this.dataGridView_takedBooks);
+            this.panel_TakedBooks.Controls.Add(this.label_books);
+            resources.ApplyResources(this.panel_TakedBooks, "panel_TakedBooks");
+            this.panel_TakedBooks.Name = "panel_TakedBooks";
             // 
-            // textBox4
+            // dataGridView_takedBooks
             // 
-            resources.ApplyResources(this.textBox4, "textBox4");
-            this.textBox4.Name = "textBox4";
+            this.dataGridView_takedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView_takedBooks, "dataGridView_takedBooks");
+            this.dataGridView_takedBooks.Name = "dataGridView_takedBooks";
+            // 
+            // label_books
+            // 
+            resources.ApplyResources(this.label_books, "label_books");
+            this.label_books.Name = "label_books";
             // 
             // Dashboard_Form
             // 
@@ -200,6 +216,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_view.ResumeLayout(false);
             this.panel_view.PerformLayout();
+            this.panel_TakedBooks.ResumeLayout(false);
+            this.panel_TakedBooks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_takedBooks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,10 +235,11 @@
         private System.Windows.Forms.Panel panel_view;
         private System.Windows.Forms.Button button_check;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label_homepage;
+        private System.Windows.Forms.Label label_close;
+        private System.Windows.Forms.Label label_home;
+        private System.Windows.Forms.Panel panel_TakedBooks;
+        private System.Windows.Forms.DataGridView dataGridView_takedBooks;
+        private System.Windows.Forms.Label label_books;
     }
 }

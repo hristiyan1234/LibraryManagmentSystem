@@ -30,7 +30,7 @@ namespace LibraryManagmentSystem.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_takeReturn = new System.Windows.Forms.Panel();
             this.button_print = new System.Windows.Forms.Button();
             this.button_download = new System.Windows.Forms.Button();
@@ -85,7 +85,6 @@ namespace LibraryManagmentSystem.Forms
             this.button_print.TabIndex = 52;
             this.button_print.Text = "ПРИНТИРАНЕ";
             this.button_print.UseVisualStyleBackColor = false;
-            this.button_print.Click += new System.EventHandler(this.button_print_Click);
             // 
             // button_download
             // 
@@ -218,6 +217,7 @@ namespace LibraryManagmentSystem.Forms
             this.button_return.TabIndex = 49;
             this.button_return.Text = "ВРЪЩАНЕ";
             this.button_return.UseVisualStyleBackColor = false;
+            this.button_return.Click += new System.EventHandler(this.button_return_Click);
             // 
             // label_close
             // 
@@ -246,7 +246,7 @@ namespace LibraryManagmentSystem.Forms
             this.button_take.TabIndex = 11;
             this.button_take.Text = "ВЗЕМАНЕ";
             this.button_take.UseVisualStyleBackColor = false;
-            this.button_take.Click += new System.EventHandler(this.button_users_Click);
+            this.button_take.Click += new System.EventHandler(this.button_take_Click);
             // 
             // button_takenBooks
             // 
@@ -260,6 +260,7 @@ namespace LibraryManagmentSystem.Forms
             this.button_takenBooks.TabIndex = 10;
             this.button_takenBooks.Text = "ВЗЕТИ КНИГИ";
             this.button_takenBooks.UseVisualStyleBackColor = false;
+            this.button_takenBooks.Click += new System.EventHandler(this.button_takenBooks_Click);
             // 
             // button_books
             // 
@@ -278,19 +279,22 @@ namespace LibraryManagmentSystem.Forms
             // dataGridView_all
             // 
             this.dataGridView_all.AllowDrop = true;
+            this.dataGridView_all.AllowUserToAddRows = false;
+            this.dataGridView_all.AllowUserToDeleteRows = false;
             this.dataGridView_all.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_all.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_all.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_all.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_all.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_all.Location = new System.Drawing.Point(12, 162);
             this.dataGridView_all.Name = "dataGridView_all";
+            this.dataGridView_all.ReadOnly = true;
             this.dataGridView_all.RowTemplate.Height = 100;
             this.dataGridView_all.Size = new System.Drawing.Size(1141, 541);
             this.dataGridView_all.TabIndex = 8;

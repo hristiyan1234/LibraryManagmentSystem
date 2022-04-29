@@ -67,9 +67,11 @@ namespace LibraryManagmentSystem.Forms
 
             if (dt.Rows.Count > 0) //ако данните в панела съвпадат със съответните колони в базата данни и потребителят е админ
             {
+                Classes.Globals.usernameH = dt.Rows[0]["username"].ToString();
                 dashboard_Form.Enabled = true; // при натискане на логин бутона панела се 'отключва'
-                this.Close();// и логин формата се затваря
-               
+                this.Hide();// и логин формата се затваря
+
+
             }
             else //иначе......
             {
@@ -89,7 +91,9 @@ namespace LibraryManagmentSystem.Forms
                 {
                     MessageBox.Show("Грешно потребителско име или парола!", "Грешни данни", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
+            } 
+                string homeUsername = "";
+                textBox_username.Text = homeUsername;
         }
     }
 }

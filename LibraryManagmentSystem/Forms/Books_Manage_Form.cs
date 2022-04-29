@@ -27,6 +27,7 @@ namespace LibraryManagmentSystem.Forms
             comboBox_author.ValueMember = "id";
         }
 
+        //..........................при натискане на ернтер курсорът минава на следващо поле за въвеждане...........................//
         private void textBox_title_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) //kaто се натисне ENTER,
@@ -34,7 +35,6 @@ namespace LibraryManagmentSystem.Forms
                 textBox_isbn.Focus(); // курсорът отива на другото поле
             }
         }
-
         private void textBox_isbn_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) //kaто се натисне ENTER,
@@ -66,8 +66,10 @@ namespace LibraryManagmentSystem.Forms
             {
                 textBox_ann.Focus(); // курсорът отива на другото поле
             }
-
         }
+        //...................................КРАЙ на събитията за преминаване на нов ред......................................//
+
+        //................събития при поставяне, махане, кликане с мишката върху хикса, с цел затваряне на приложението...........//
         private void label_close_MouseEnter(object sender, EventArgs e) // когато мишката е в/у хикса да светне хикса
         {
             label_close.ForeColor = Color.Red; // X става червен
@@ -85,7 +87,9 @@ namespace LibraryManagmentSystem.Forms
                 Application.Exit();
             }
         }
+        //.................................................КРАЙ на събитията отговарящи за затварянето на апликацията.......................//
 
+        //...............................при натискане на СНИМКА бутонът.......................//
         private void button_AddBookCover_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -100,37 +104,35 @@ namespace LibraryManagmentSystem.Forms
             comboBox_author.Text = "";
             DataRowView dataRowView = (DataRowView)comboBox_author.SelectedItem;
             string name = dataRowView["name"].ToString();
-
-
         }
+        //.....................................................................................//
 
-        private void barcodeGenerator()
-        {
+        //...................ФУНКЦИЯ ЗА ГЕНЕРИРАНЕ НА БАРКОД НА КНИГАТА ПО НЕЙНОТО ISBN.............//
+        //private void barcodeGenerator()
+        //{
+        //    string barcode = textBox_isbn.Text;
+        //    Bitmap bitm = new Bitmap(barcode.Length * 45, 160);
+        //    using (Graphics graphic = Graphics.FromImage(bitm))
+        //    {
+        //        Font newfont = new Font("IDAutomationHC39M", 20);
+        //        PointF point = new PointF(2f, 2f);
+        //        SolidBrush black = new SolidBrush(Color.Black);
+        //        SolidBrush white = new SolidBrush(Color.White);
+        //        graphic.FillRectangle(white, 0, 0, bitm.Width, bitm.Height);
+        //        graphic.DrawString("*" + barcode + "*", newfont, black, point);
+        //    }
 
+        //    using (MemoryStream Mmst = new MemoryStream())
+        //    {
+        //        bitm.Save("ms", ImageFormat.Jpeg);
+        //        pictureBox_barcode.Image = bitm;
+        //        pictureBox_barcode.Width = bitm.Width;
+        //        pictureBox_barcode.Height = bitm.Height;
+        //    }
+        //}
+        //................................................................................................//
 
-
-            //Bitmap bitMap = new Bitmap(100, 60);
-
-            //using (Graphics graphics = Graphics.FromImage(bitMap))
-            //{
-            //    Font barCodeF = new Font("c39hrp48dhtt", 31);
-            //    PointF point = new PointF(1, 1);
-            //    SolidBrush blackBrush = new SolidBrush(Color.Black);
-            //    SolidBrush whiteBrush = new SolidBrush(Color.White);
-            //    graphics.FillRectangle(whiteBrush, 0, 0, 100, 60);
-            //    graphics.DrawString(textBox_isbn.Text, barCodeF, blackBrush, point);
-            //}
-            //using (MemoryStream ms = new MemoryStream())
-            //{
-            //    bitMap.Save(ms, ImageFormat.Png);
-            //    pictureBox_barcode.Image = bitMap;
-            //    pictureBox_barcode.Height = 60;
-            //    pictureBox_barcode.Width = 100;
-            //    pictureBox_barcode.SizeMode = Image.
-            //}
-        }
-
-
+        //..при натискане на бутон "добавяне" се осъществява добавяне на нова книга в базата......//
         private void button_addBook_Click(object sender, EventArgs e)
         {
             string title = textBox_title.Text; //колоната title взима информацията от textBox_title
@@ -166,7 +168,7 @@ namespace LibraryManagmentSystem.Forms
                     {
                         MessageBox.Show("kнигата " + title + " е добавенa!" + "Имате " + quantity + " броя от нея", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dataGridView_books.DataSource = newBooks.BooksList();
-                        barcodeGenerator();
+                        // barcodeGenerator();
                         textBox_id.Text = "";
                         textBox_title.Text = "";
                         textBox_isbn.Text = "";
@@ -180,8 +182,9 @@ namespace LibraryManagmentSystem.Forms
                 }
             }
         }
-        //.............................................................................
+        //..................................................................................................//
 
+        //..при натискане на бутон "обнови" се осъществява актуализация на даните за съответна книга в базата......//
         private void button_updateBook_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBox_id.Text);
@@ -215,7 +218,7 @@ namespace LibraryManagmentSystem.Forms
                 {
                     MessageBox.Show("kнигата" + title + " е обновена!" + "Имате " + quantity + " броя от нея", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridView_books.DataSource = newBooks.BooksList();
-                    barcodeGenerator();
+                    // barcodeGenerator();
                     textBox_id.Text = "";
                     textBox_title.Text = "";
                     textBox_isbn.Text = "";
@@ -228,8 +231,9 @@ namespace LibraryManagmentSystem.Forms
                 }
             }
         }
-        //.............................................................................
+        //...................................................................................................//
 
+        //...........при натискане на бутон премахване се изтриват данните за съответната книга от базата данни..........//
         private void button_removeBook_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBox_id.Text);
@@ -251,19 +255,27 @@ namespace LibraryManagmentSystem.Forms
                 }
             }
         }
+        //.................................................................................................................//
+
+        //.............изобразяване на данните на съответен потребител при селектиране на съответен ред.................//
         private void dataGridView_books_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            comboBox_author.Text = string.Empty;
             textBox_id.Text = dataGridView_books.CurrentRow.Cells[0].Value.ToString();
             textBox_title.Text = dataGridView_books.CurrentRow.Cells[1].Value.ToString();
-            comboBox_author.Text = dataGridView_books.CurrentRow.Cells[2].Value.ToString();
+            comboBox_author.SelectedText = dataGridView_books.CurrentRow.Cells[2].Value.ToString();
             textBox_isbn.Text = dataGridView_books.CurrentRow.Cells[3].Value.ToString();
             textBox_genre.Text = dataGridView_books.CurrentRow.Cells[4].Value.ToString();
             textBox_publishHouse.Text = dataGridView_books.CurrentRow.Cells[5].Value.ToString();
             numericUpDown_quantity.Value = decimal.Parse(dataGridView_books.CurrentRow.Cells[6].Value.ToString());
             dateTimePicker_date.Value = DateTime.Parse(dataGridView_books.CurrentRow.Cells[7].Value.ToString());
             textBox_ann.Text = dataGridView_books.CurrentRow.Cells[8].Value.ToString();
+
+            Byte[] img = new Byte[0];
+            img = (Byte[])(dataGridView_books.CurrentRow.Cells[9]).Value;
+            MemoryStream memoryStream = new MemoryStream(img);
+            pictureBox_bookCover.Image = Image.FromStream(memoryStream);
         }
-
-
+        //.............................................................................................................//
     }
 }

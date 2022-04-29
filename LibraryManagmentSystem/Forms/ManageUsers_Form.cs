@@ -15,6 +15,8 @@ namespace LibraryManagmentSystem.Forms
             InitializeComponent();
         }
         Classes.Users newUser = new Classes.Users();
+
+
         private void ManageUsers_Form_Load(object sender, EventArgs e)
         {
             pictureBox_userPhoto.Image = Image.FromFile("../../Images/user.png");
@@ -46,7 +48,9 @@ namespace LibraryManagmentSystem.Forms
         public static bool IsValidEmail(string email)
         {
             if (string.IsNullOrWhiteSpace(email))
+            {
                 return false;
+            }
 
             try
             {
@@ -94,9 +98,9 @@ namespace LibraryManagmentSystem.Forms
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureBox_userPhoto.Image = Image.FromFile(openFileDialog.FileName);
-           }
+            }
         }
-        
+
         //при натискане на бутон "добавяне" се осъществява добавяне на нов потребител в базата
         private void button_addUser_Click(object sender, EventArgs e)
         {
@@ -143,10 +147,10 @@ namespace LibraryManagmentSystem.Forms
                 {
                     MessageBox.Show("Този имейл вече е зает!", "Заети данни", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (!textBox_phone.Equals("") && newUser.UniqPhone(phone))
-                {
-                    MessageBox.Show("Този телефон вече е зает!", "Заети данни", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else if (!textBox_phone.Equals("") && newUser.UniqPhone(phone))
+                //{
+                //    MessageBox.Show("Този телефон вече е зает!", "Заети данни", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
                 else if (newUser.AddUser(firstName, midName, lastName, username, phone, email, password, userType, userClass, addDate, photo)) // 
                 {
                     MessageBox.Show("Потребителят с потр. име " + username + " е добавен!", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -271,10 +275,11 @@ namespace LibraryManagmentSystem.Forms
             textBox_mail.Text = dataGridView_users.CurrentRow.Cells[7].Value.ToString();
             comboBox_position.Text = dataGridView_users.CurrentRow.Cells[8].Value.ToString();
             comboBox_class.Text = dataGridView_users.CurrentRow.Cells[9].Value.ToString();
+
+            Byte[] img = new Byte[0];
+            img = (Byte[])(dataGridView_users.CurrentRow.Cells[11]).Value;
+            MemoryStream memoryStream = new MemoryStream(img);
+            pictureBox_userPhoto.Image = Image.FromStream(memoryStream);
         }
-
-
-
-
     }
 }

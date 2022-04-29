@@ -1,6 +1,6 @@
 ﻿namespace LibraryManagmentSystem.Forms
 {
-    partial class TakeBook_Form
+    partial class ReturnBook_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TakeBook_Form));
-            this.label_takeook = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label_qty = new System.Windows.Forms.Label();
-            this.label_qty1 = new System.Windows.Forms.Label();
-            this.label_sUser = new System.Windows.Forms.Label();
-            this.numericUpDown_id = new System.Windows.Forms.NumericUpDown();
             this.label_id = new System.Windows.Forms.Label();
             this.label_close = new System.Windows.Forms.Label();
-            this.button_take = new System.Windows.Forms.Button();
+            this.button_return = new System.Windows.Forms.Button();
             this.textBox_user = new System.Windows.Forms.TextBox();
             this.label_user = new System.Windows.Forms.Label();
             this.label_quantity = new System.Windows.Forms.Label();
@@ -52,34 +46,27 @@
             this.dateTimePicker_give = new System.Windows.Forms.DateTimePicker();
             this.textBox_title = new System.Windows.Forms.TextBox();
             this.label_title = new System.Windows.Forms.Label();
+            this.label_returnbook = new System.Windows.Forms.Label();
+            this.numericUpDown_id = new System.Windows.Forms.NumericUpDown();
+            this.label_qty = new System.Windows.Forms.Label();
+            this.label_qty1 = new System.Windows.Forms.Label();
+            this.label_sUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label_takeook
-            // 
-            this.label_takeook.BackColor = System.Drawing.Color.LimeGreen;
-            this.label_takeook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_takeook.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_takeook.Location = new System.Drawing.Point(0, 0);
-            this.label_takeook.Name = "label_takeook";
-            this.label_takeook.Size = new System.Drawing.Size(431, 70);
-            this.label_takeook.TabIndex = 7;
-            this.label_takeook.Text = "ВЗЕМАНЕ НА КНИГА";
-            this.label_takeook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MistyRose;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label_sUser);
             this.panel1.Controls.Add(this.label_qty);
             this.panel1.Controls.Add(this.label_qty1);
-            this.panel1.Controls.Add(this.label_sUser);
             this.panel1.Controls.Add(this.numericUpDown_id);
             this.panel1.Controls.Add(this.label_id);
             this.panel1.Controls.Add(this.label_close);
-            this.panel1.Controls.Add(this.button_take);
+            this.panel1.Controls.Add(this.button_return);
             this.panel1.Controls.Add(this.textBox_user);
             this.panel1.Controls.Add(this.label_user);
             this.panel1.Controls.Add(this.label_quantity);
@@ -94,66 +81,19 @@
             this.panel1.Controls.Add(this.dateTimePicker_give);
             this.panel1.Controls.Add(this.textBox_title);
             this.panel1.Controls.Add(this.label_title);
-            this.panel1.Controls.Add(this.label_takeook);
+            this.panel1.Controls.Add(this.label_returnbook);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(433, 601);
-            this.panel1.TabIndex = 8;
-            // 
-            // label_qty
-            // 
-            this.label_qty.AutoSize = true;
-            this.label_qty.BackColor = System.Drawing.SystemColors.Window;
-            this.label_qty.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_qty.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_qty.ForeColor = System.Drawing.Color.Ivory;
-            this.label_qty.Location = new System.Drawing.Point(358, 86);
-            this.label_qty.Name = "label_qty";
-            this.label_qty.Size = new System.Drawing.Size(22, 23);
-            this.label_qty.TabIndex = 61;
-            this.label_qty.Text = "X";
-            // 
-            // label_qty1
-            // 
-            this.label_qty1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_qty1.Location = new System.Drawing.Point(275, 82);
-            this.label_qty1.Name = "label_qty1";
-            this.label_qty1.Size = new System.Drawing.Size(91, 23);
-            this.label_qty1.TabIndex = 62;
-            this.label_qty1.Text = "Наличност:";
-            this.label_qty1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label_sUser
-            // 
-            this.label_sUser.AutoSize = true;
-            this.label_sUser.BackColor = System.Drawing.SystemColors.Window;
-            this.label_sUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_sUser.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_sUser.ForeColor = System.Drawing.Color.Ivory;
-            this.label_sUser.Location = new System.Drawing.Point(352, 142);
-            this.label_sUser.Name = "label_sUser";
-            this.label_sUser.Size = new System.Drawing.Size(22, 23);
-            this.label_sUser.TabIndex = 59;
-            this.label_sUser.Text = "X";
-            // 
-            // numericUpDown_id
-            // 
-            this.numericUpDown_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown_id.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.numericUpDown_id.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown_id.Location = new System.Drawing.Point(71, 79);
-            this.numericUpDown_id.Name = "numericUpDown_id";
-            this.numericUpDown_id.Size = new System.Drawing.Size(134, 30);
-            this.numericUpDown_id.TabIndex = 58;
-            this.numericUpDown_id.ValueChanged += new System.EventHandler(this.numericUpDown_id_ValueChanged);
+            this.panel1.Size = new System.Drawing.Size(434, 603);
+            this.panel1.TabIndex = 9;
             // 
             // label_id
             // 
             this.label_id.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_id.Location = new System.Drawing.Point(30, 79);
             this.label_id.Name = "label_id";
-            this.label_id.Size = new System.Drawing.Size(46, 27);
+            this.label_id.Size = new System.Drawing.Size(124, 27);
             this.label_id.TabIndex = 57;
             this.label_id.Text = "ID: ";
             this.label_id.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,20 +114,20 @@
             this.label_close.MouseEnter += new System.EventHandler(this.label_close_MouseEnter);
             this.label_close.MouseLeave += new System.EventHandler(this.label_close_MouseLeave);
             // 
-            // button_take
+            // button_return
             // 
-            this.button_take.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
-            this.button_take.BackColor = System.Drawing.Color.ForestGreen;
-            this.button_take.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_take.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_take.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_take.Location = new System.Drawing.Point(224, 512);
-            this.button_take.Name = "button_take";
-            this.button_take.Size = new System.Drawing.Size(164, 44);
-            this.button_take.TabIndex = 55;
-            this.button_take.Text = "ВЗЕМАНЕ";
-            this.button_take.UseVisualStyleBackColor = false;
-            this.button_take.Click += new System.EventHandler(this.button_take_Click);
+            this.button_return.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
+            this.button_return.BackColor = System.Drawing.Color.ForestGreen;
+            this.button_return.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_return.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_return.Location = new System.Drawing.Point(224, 512);
+            this.button_return.Name = "button_return";
+            this.button_return.Size = new System.Drawing.Size(164, 44);
+            this.button_return.TabIndex = 55;
+            this.button_return.Text = "ВРЪЩАНЕ";
+            this.button_return.UseVisualStyleBackColor = false;
+            this.button_return.Click += new System.EventHandler(this.button_return_Click);
             // 
             // textBox_user
             // 
@@ -328,31 +268,90 @@
             this.label_title.Text = "Заглавие:";
             this.label_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // TakeBook_Form
+            // label_returnbook
+            // 
+            this.label_returnbook.BackColor = System.Drawing.Color.LimeGreen;
+            this.label_returnbook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_returnbook.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_returnbook.Location = new System.Drawing.Point(0, 0);
+            this.label_returnbook.Name = "label_returnbook";
+            this.label_returnbook.Size = new System.Drawing.Size(432, 70);
+            this.label_returnbook.TabIndex = 7;
+            this.label_returnbook.Text = "ВРЪЩАНЕ НА КНИГА";
+            this.label_returnbook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numericUpDown_id
+            // 
+            this.numericUpDown_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown_id.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDown_id.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown_id.Location = new System.Drawing.Point(71, 79);
+            this.numericUpDown_id.Name = "numericUpDown_id";
+            this.numericUpDown_id.Size = new System.Drawing.Size(134, 30);
+            this.numericUpDown_id.TabIndex = 59;
+            this.numericUpDown_id.ValueChanged += new System.EventHandler(this.numericUpDown_id_ValueChanged);
+            // 
+            // label_qty
+            // 
+            this.label_qty.AutoSize = true;
+            this.label_qty.BackColor = System.Drawing.SystemColors.Window;
+            this.label_qty.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_qty.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_qty.ForeColor = System.Drawing.Color.Ivory;
+            this.label_qty.Location = new System.Drawing.Point(366, 86);
+            this.label_qty.Name = "label_qty";
+            this.label_qty.Size = new System.Drawing.Size(22, 23);
+            this.label_qty.TabIndex = 63;
+            this.label_qty.Text = "X";
+            // 
+            // label_qty1
+            // 
+            this.label_qty1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_qty1.Location = new System.Drawing.Point(279, 82);
+            this.label_qty1.Name = "label_qty1";
+            this.label_qty1.Size = new System.Drawing.Size(91, 27);
+            this.label_qty1.TabIndex = 64;
+            this.label_qty1.Text = "Наличност:";
+            this.label_qty1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label_sUser
+            // 
+            this.label_sUser.AutoSize = true;
+            this.label_sUser.BackColor = System.Drawing.SystemColors.Window;
+            this.label_sUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_sUser.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_sUser.ForeColor = System.Drawing.Color.Ivory;
+            this.label_sUser.Location = new System.Drawing.Point(348, 142);
+            this.label_sUser.Name = "label_sUser";
+            this.label_sUser.Size = new System.Drawing.Size(22, 23);
+            this.label_sUser.TabIndex = 65;
+            this.label_sUser.Text = "X";
+            // 
+            // ReturnBook_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 601);
+            this.ClientSize = new System.Drawing.Size(434, 603);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "TakeBook_Form";
+            this.Name = "ReturnBook_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Вземи Книга";
+            this.Text = "ReturnBook_Form";
+            this.Load += new System.EventHandler(this.ReturnBook_Form_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label_takeook;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox_title;
-        private System.Windows.Forms.Label label_title;
+        private System.Windows.Forms.Label label_id;
+        private System.Windows.Forms.Label label_close;
+        private System.Windows.Forms.Button button_return;
         private System.Windows.Forms.TextBox textBox_user;
         private System.Windows.Forms.Label label_user;
         private System.Windows.Forms.Label label_quantity;
@@ -365,12 +364,12 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_back;
         private System.Windows.Forms.Label label_takeDate;
         private System.Windows.Forms.DateTimePicker dateTimePicker_give;
-        private System.Windows.Forms.Button button_take;
-        private System.Windows.Forms.Label label_close;
-        private System.Windows.Forms.Label label_id;
+        private System.Windows.Forms.TextBox textBox_title;
+        private System.Windows.Forms.Label label_title;
+        private System.Windows.Forms.Label label_returnbook;
         private System.Windows.Forms.NumericUpDown numericUpDown_id;
-        private System.Windows.Forms.Label label_sUser;
-        private System.Windows.Forms.Label label_qty1;
         private System.Windows.Forms.Label label_qty;
+        private System.Windows.Forms.Label label_qty1;
+        private System.Windows.Forms.Label label_sUser;
     }
 }
